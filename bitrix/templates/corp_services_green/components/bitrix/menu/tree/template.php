@@ -10,7 +10,7 @@ function __DrawLevelMenuTreeT($ar, $ind, &$f)
 	$res = '';
 	$l = count($ar);
 	$arItem = $ar[$ind];
-	
+
 	if($arItem["SELECTED"])
 		$css = 'class="selected"';
 
