@@ -12,7 +12,7 @@
 
 										<div class="item">
 											<div class="preview">
-												<img src="img/news/доминикана.png">
+												<img src="<?= SITE_TEMPLATE_PATH ?>/img/news/d.png">
 											</div>
 											<div class="n-staff">
 												<span class="date">30.10.2014</span>
@@ -30,7 +30,7 @@
 
 										<div class="item">
 											<div class="preview">
-												<img src="img/news/лучшее туристическое агентсво.png">
+												<img src="<?= SITE_TEMPLATE_PATH ?>/img/news/l.png">
 											</div>
 											<div class="n-staff">
 												<span class="date">23.10.2014</span>
@@ -48,7 +48,7 @@
 
 										<div class="item">
 											<div class="preview">
-												<img src="img/news/таиланд.png">
+												<img src="<?= SITE_TEMPLATE_PATH ?>/img/news/t.png">
 											</div>
 											<div class="n-staff">
 												<span class="date">20.10.2014</span>
@@ -80,7 +80,7 @@
 
 										<div class="item">
 											<div class="preview">
-												<img src="img/news/греция.png">
+												<img src="<?= SITE_TEMPLATE_PATH ?>/img/news/g.png">
 											</div>
 											<div class="n-staff">
 												<span class="date">23.10.2014</span>
@@ -98,7 +98,7 @@
 
 										<div class="item">
 											<div class="preview">
-												<img src="img/news/подарок на день рождения.png">
+												<img src="<?= SITE_TEMPLATE_PATH ?>/img/news/p.png">
 											</div>
 											<div class="n-staff">
 												<span class="date">1.10.2014</span>
@@ -116,7 +116,7 @@
 
 										<div class="item">
 											<div class="preview">
-												<img src="img/news/лыжи.png">
+												<img src="<?= SITE_TEMPLATE_PATH ?>/img/news/li.png">
 											</div>
 											<div class="n-staff">
 												<span class="date">10.09.2014</span>
@@ -222,9 +222,9 @@
 		<!-- /footer -->
 
 		<!-- Javascripts -->
-		<script src="js/jquery-2.1.0.min.js"></script>
-		<script src="js/jquery.bxslider.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="<?= SITE_TEMPLATE_PATH ?>/js/jquery-2.1.0.min.js"></script>
+		<script src="<?= SITE_TEMPLATE_PATH ?>/js/jquery.bxslider.min.js"></script>
+		<script src="<?= SITE_TEMPLATE_PATH ?>/js/main.js"></script>
 		<!-- / Javascripts -->
 	</body>
 </html>
