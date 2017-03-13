@@ -56,28 +56,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
                     );
                     ?>
                 </div>
-                <!--Слоган сайта-->
                 <div class="sign">
-                    <?php
-                    $APPLICATION->IncludeFile(
-                        '/include/tagline.php',
-                        [],
-                        ['MODE' => 'php']
-                    );
-                    ?>
+                    <span class="name">Туристическое агентство</span>
+                    путешествуйте с нами по всему миру!
                 </div>
-                <!--/Слоган сайта-->
 
             </div>
             <div class="col-sm-4">
                 <div class="contacts">
-                    <?php
-                    $APPLICATION->IncludeFile(
-                        '/include/contacts.php',
-                        [],
-                        ['MODE' => 'php']
-                    );
-                    ?>
+							<span class="phone">
+								<span>+7 4912</span> 56 78 90
+							</span>
+							<span class="graph">
+								10:00 - 20:00
+							</span>
                 </div>
                 <div class="user-box">
                     <a href="#" class="enter">Войти на сайт</a>
@@ -134,14 +126,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 <!-- content -->
 <div class="content">
     <div class="container staff">
-
-        <!-- slider -->
-        <ul class="head-slider">
-            <li><img src="<?= SITE_TEMPLATE_PATH ?>/img/slider-photo/unsplash_52d5c05422a47_1.JPG"></li>
-            <li><img src="<?= SITE_TEMPLATE_PATH ?>/img/slider-photo/unsplash_52cb185a63c25_1.JPG"></li>
-            <li><img src="<?= SITE_TEMPLATE_PATH ?>/img/slider-photo/unsplash_52d5bbef8a613_1.JPG"></li>
-        </ul>
-        <!-- /slider -->
 
         <div class="row">
             <div class="col-md-9">

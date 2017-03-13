@@ -209,17 +209,24 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                     </form>
                 </div>
                 <ul class="social-links">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <?php
+                    $APPLICATION->IncludeFile(
+                        '/include/social.php',
+                        [],
+                        ['MODE' => 'php']
+                    );
+                    ?>
                 </ul>
             </div>
         </div>
         <div class="copy">
-            <div class="left">© Туристическое агентство, 2014</div>
-            <div class="right">
-                <a href="#">Разработка сайта - Buroff</a>
-            </div>
+            <?php
+            $APPLICATION->IncludeFile(
+                '/include/copyright.php',
+                [],
+                ['MODE' => 'php']
+            );
+            ?>
         </div>
     </div>
 </footer>
