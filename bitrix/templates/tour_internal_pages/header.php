@@ -71,10 +71,18 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 								10:00 - 20:00
 							</span>
                 </div>
-                <div class="user-box">
-                    <a href="#" class="enter">Войти на сайт</a>
-                    <!-- <span class="user-name">Тинаева Люба</span> -->
-                </div>
+                <? $APPLICATION->IncludeComponent(
+                    "bitrix:system.auth.form",
+                    "tour_auth",
+                    array(
+                        "FORGOT_PASSWORD_URL" => "",
+                        "PROFILE_URL" => "",
+                        "REGISTER_URL" => "/registration",
+                        "SHOW_ERRORS" => "N",
+                        "COMPONENT_TEMPLATE" => "tour_auth"
+                    ),
+                    false
+                ); ?>
             </div>
         </div>
     </div>
@@ -91,34 +99,25 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
                 <span></span>
             </a>
         </div>
-        <ul class="menu">
-            <li><a class="act" href="#">Главная</a></li>
-            <li class="dd"><a href="#">Об агентстве</a>
-                <ul>
-                    <li><a href="#">История</a></li>
-                </ul>
-            </li>
-            <li class="dd"><a href="#">Новости и акции</a>
-                <ul>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Акции</a></li>
-                </ul>
-            </li>
-            <li class="dd"><a href="#">Подбор тура</a>
-                <ul>
-                    <li><a href="#">Турция</a></li>
-                    <li><a href="#">Египет</a></li>
-                    <li><a href="#">Таиланд</a></li>
-                    <li><a href="#">Индия</a></li>
-                    <li><a href="#">Греция</a></li>
-                    <li><a href="#">Канарские острова</a></li>
-                    <li><a href="#">Чехия</a></li>
-                    <li><a href="#">Болгария</a></li>
-                    <li><a href="#">Вьетнам</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Контакты</a></li>
-        </ul>
+
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:menu",
+            "tour_menu_horizontal_multilevel",
+            array(
+                "ALLOW_MULTI_SELECT" => "N",
+                "CHILD_MENU_TYPE" => "left",
+                "DELAY" => "N",
+                "MAX_LEVEL" => "2",
+                "MENU_CACHE_GET_VARS" => array(),
+                "MENU_CACHE_TIME" => "3600",
+                "MENU_CACHE_TYPE" => "N",
+                "MENU_CACHE_USE_GROUPS" => "Y",
+                "ROOT_MENU_TYPE" => "top",
+                "USE_EXT" => "N",
+                "COMPONENT_TEMPLATE" => "tour_menu_horizontal_multilevel"
+            ),
+            false
+        ); ?>
     </div>
 </nav>
 <!-- /nav -->
@@ -130,13 +129,17 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
         <div class="row">
             <div class="col-md-9">
 
-                <div class="breadcrumbs">
-                    <ul>
-                        <li><a href="#">Главная</a></li>
-                        <!-- <li><a href="#">Path</a></li>
-                        <li><a href="#">Path</a></li> -->
-                    </ul>
-                </div>
+                <? $APPLICATION->IncludeComponent(
+                    "bitrix:breadcrumb",
+                    "tour_breadcrumb",
+                    array(
+                        "PATH" => "",
+                        "SITE_ID" => "s1",
+                        "START_FROM" => "0",
+                        "COMPONENT_TEMPLATE" => "tour_breadcrumb"
+                    ),
+                    false
+                ); ?>
 
                 <h1 class="txt-title">
                     </span><?php $APPLICATION->ShowTitle(false); ?><span>

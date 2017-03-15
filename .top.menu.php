@@ -11,14 +11,14 @@ $aMenuLinks = Array(
 		"Об агентстве", 
 		"about/", 
 		Array(), 
-		Array(), 
+		Array(),
 		"" 
 	),
 	Array(
-		"Новости", 
+		"Новости и акции",
 		"news/", 
-		Array(), 
-		Array(), 
+		[],
+		[],
 		"" 
 	),
 	Array(

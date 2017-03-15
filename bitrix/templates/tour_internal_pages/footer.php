@@ -33,24 +33,24 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
     <div class="container">
         <div class="row">
             <div class="col-sm-7 col-lg-8">
-                <ul class="footer-menu">
-                    <li>
-                        <ul>
-                            <li><a href="#">об агентстве</a></li>
-                            <li><a href="#">новости</a></li>
-                            <li><a href="#">акции</a></li>
-                            <li><a href="#">подбор тура</a></li>
-                            <li><a href="#">контакты</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li><a href="#">поиск</a></li>
-                            <li><a href="#">карта сайта</a></li>
-                            <li><a href="#">авторизация</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <? $APPLICATION->IncludeComponent(
+                    "bitrix:menu",
+                    "bottom_menu",
+                    array(
+                        "ALLOW_MULTI_SELECT" => "N",
+                        "CHILD_MENU_TYPE" => "left",
+                        "DELAY" => "N",
+                        "MAX_LEVEL" => "1",
+                        "MENU_CACHE_GET_VARS" => array(),
+                        "MENU_CACHE_TIME" => "3600",
+                        "MENU_CACHE_TYPE" => "A",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "ROOT_MENU_TYPE" => "bottom",
+                        "USE_EXT" => "N",
+                        "COMPONENT_TEMPLATE" => "bottom_menu"
+                    ),
+                    false
+                ); ?>
             </div>
             <div class="col-sm-5 col-lg-4">
                 <div class="search-box">
@@ -62,17 +62,24 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                     </form>
                 </div>
                 <ul class="social-links">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <?php
+                    $APPLICATION->IncludeFile(
+                        '/include/social.php',
+                        [],
+                        ['MODE' => 'php']
+                    );
+                    ?>
                 </ul>
             </div>
         </div>
         <div class="copy">
-            <div class="left">© Туристическое агентство, 2014</div>
-            <div class="right">
-                <a href="#">Разработка сайта - Buroff</a>
-            </div>
+            <?php
+            $APPLICATION->IncludeFile(
+                '/include/copyright.php',
+                [],
+                ['MODE' => 'php']
+            );
+            ?>
         </div>
     </div>
 </footer>
