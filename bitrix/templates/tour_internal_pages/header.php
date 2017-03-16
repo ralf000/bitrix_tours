@@ -101,23 +101,24 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
         </div>
 
         <? $APPLICATION->IncludeComponent(
-            "bitrix:menu",
-            "tour_menu_horizontal_multilevel",
-            array(
-                "ALLOW_MULTI_SELECT" => "N",
-                "CHILD_MENU_TYPE" => "left",
-                "DELAY" => "N",
-                "MAX_LEVEL" => "2",
-                "MENU_CACHE_GET_VARS" => array(),
-                "MENU_CACHE_TIME" => "3600",
-                "MENU_CACHE_TYPE" => "N",
-                "MENU_CACHE_USE_GROUPS" => "Y",
-                "ROOT_MENU_TYPE" => "top",
-                "USE_EXT" => "N",
-                "COMPONENT_TEMPLATE" => "tour_menu_horizontal_multilevel"
-            ),
-            false
-        ); ?>
+	"bitrix:menu", 
+	"tour_menu_horizontal_multilevel", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "2",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "tour_menu_horizontal_multilevel"
+	),
+	false
+); ?>
     </div>
 </nav>
 <!-- /nav -->

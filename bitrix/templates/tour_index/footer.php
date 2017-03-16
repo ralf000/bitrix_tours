@@ -5,139 +5,138 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 <div class="row">
     <div class="col-sm-6">
 
-        <div class="green-box">
-            <div class="title">
-                <h2>
-                    <a href="#">Новости</a>
-                </h2>
-            </div>
-            <div class="cnt">
-
-                <div class="item">
-                    <div class="preview">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/img/news/d.png">
-                    </div>
-                    <div class="n-staff">
-                        <span class="date">30.10.2014</span>
-                        <h3>
-                            <a href="#">Отдых в Доминикане</a>
-                        </h3>
-                        <p class="txt">
-                            Мы открываем новую возможность для наших клиентов - отдых в Доминикане.
-                        </p>
-                        <div class="more-btn-box">
-                            <a href="#" class="link">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="preview">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/img/news/l.png">
-                    </div>
-                    <div class="n-staff">
-                        <span class="date">23.10.2014</span>
-                        <h3>
-                            <a href="#">2-е место</a>
-                        </h3>
-                        <p class="txt">
-                            22 октября наша компания заняла 2-е место в номинации "Лучшее туристическое агентство 2014".
-                        </p>
-                        <div class="more-btn-box">
-                            <a href="#" class="link">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="preview">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/img/news/t.png">
-                    </div>
-                    <div class="n-staff">
-                        <span class="date">20.10.2014</span>
-                        <h3>
-                            <a href="#">Экстрим в Таиланде</a>
-                        </h3>
-                        <p class="txt">
-                            Наш коллега Дмитрий Коновалов недавно вернулся из Таиланда и хочет поделиться своими
-                            впечатлениями об экстримальном отдыхе в этой стране.
-                        </p>
-                        <div class="more-btn-box">
-                            <a href="#" class="link">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:news.list",
+            "tour_news_index",
+            array(
+                "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                "ADD_SECTIONS_CHAIN" => "Y",
+                "AJAX_MODE" => "N",
+                "AJAX_OPTION_ADDITIONAL" => "",
+                "AJAX_OPTION_HISTORY" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "CHECK_DATES" => "Y",
+                "DETAIL_URL" => "",
+                "DISPLAY_BOTTOM_PAGER" => "Y",
+                "DISPLAY_DATE" => "Y",
+                "DISPLAY_NAME" => "Y",
+                "DISPLAY_PICTURE" => "Y",
+                "DISPLAY_PREVIEW_TEXT" => "Y",
+                "DISPLAY_TOP_PAGER" => "N",
+                "FIELD_CODE" => array(
+                    0 => "",
+                    1 => "",
+                ),
+                "FILTER_NAME" => "",
+                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                "IBLOCK_ID" => "4",
+                "IBLOCK_TYPE" => "news",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                "INCLUDE_SUBSECTIONS" => "Y",
+                "MESSAGE_404" => "",
+                "NEWS_COUNT" => "20",
+                "PAGER_BASE_LINK_ENABLE" => "N",
+                "PAGER_DESC_NUMBERING" => "N",
+                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                "PAGER_SHOW_ALL" => "N",
+                "PAGER_SHOW_ALWAYS" => "N",
+                "PAGER_TEMPLATE" => ".default",
+                "PAGER_TITLE" => "Новости",
+                "PARENT_SECTION" => "",
+                "PARENT_SECTION_CODE" => "",
+                "PREVIEW_TRUNCATE_LEN" => "",
+                "PROPERTY_CODE" => array(
+                    0 => "",
+                    1 => "",
+                ),
+                "SET_BROWSER_TITLE" => "Y",
+                "SET_LAST_MODIFIED" => "N",
+                "SET_META_DESCRIPTION" => "Y",
+                "SET_META_KEYWORDS" => "Y",
+                "SET_STATUS_404" => "N",
+                "SET_TITLE" => "Y",
+                "SHOW_404" => "N",
+                "SORT_BY1" => "ACTIVE_FROM",
+                "SORT_BY2" => "SORT",
+                "SORT_ORDER1" => "DESC",
+                "SORT_ORDER2" => "ASC",
+                "COMPONENT_TEMPLATE" => "tour_news_index"
+            ),
+            false
+        ); ?>
 
     </div>
     <div class="col-sm-6">
 
-        <div class="green-box">
-            <div class="title">
-                <h2>
-                    <a href="#">Акции</a>
-                </h2>
-            </div>
-            <div class="cnt">
-
-                <div class="item">
-                    <div class="preview">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/img/news/g.png">
-                    </div>
-                    <div class="n-staff">
-                        <span class="date">23.10.2014</span>
-                        <h3>
-                            <a href="#">Путёвка в Грецию на двоих всего за 50000!</a>
-                        </h3>
-                        <p class="txt">
-                            Не пропустите новое специальное предложение!
-                        </p>
-                        <div class="more-btn-box">
-                            <a href="#" class="link">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="preview">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/img/news/p.png">
-                    </div>
-                    <div class="n-staff">
-                        <span class="date">1.10.2014</span>
-                        <h3>
-                            <a href="#">Подарок в честь Дня Рождения!</a>
-                        </h3>
-                        <p class="txt">
-                            В День Рождения кадому клиенту дарим скидку 15%!!!
-                        </p>
-                        <div class="more-btn-box">
-                            <a href="#" class="link">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="preview">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/img/news/li.png">
-                    </div>
-                    <div class="n-staff">
-                        <span class="date">10.09.2014</span>
-                        <h3>
-                            <a href="#">Скидки на горнолыжные курорты!</a>
-                        </h3>
-                        <p class="txt">
-                            Начинается горнолыжный сезон! Для Вас - специальное предложение!
-                        </p>
-                        <div class="more-btn-box">
-                            <a href="#" class="link">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:news.list",
+            "tour_news_index",
+            array(
+                "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                "ADD_SECTIONS_CHAIN" => "Y",
+                "AJAX_MODE" => "N",
+                "AJAX_OPTION_ADDITIONAL" => "",
+                "AJAX_OPTION_HISTORY" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "CHECK_DATES" => "Y",
+                "DETAIL_URL" => "",
+                "DISPLAY_BOTTOM_PAGER" => "Y",
+                "DISPLAY_DATE" => "Y",
+                "DISPLAY_NAME" => "Y",
+                "DISPLAY_PICTURE" => "Y",
+                "DISPLAY_PREVIEW_TEXT" => "Y",
+                "DISPLAY_TOP_PAGER" => "N",
+                "FIELD_CODE" => array(
+                    0 => "",
+                    1 => "",
+                ),
+                "FILTER_NAME" => "",
+                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                "IBLOCK_ID" => "5",
+                "IBLOCK_TYPE" => "news",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                "INCLUDE_SUBSECTIONS" => "Y",
+                "MESSAGE_404" => "",
+                "NEWS_COUNT" => "20",
+                "PAGER_BASE_LINK_ENABLE" => "N",
+                "PAGER_DESC_NUMBERING" => "N",
+                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                "PAGER_SHOW_ALL" => "N",
+                "PAGER_SHOW_ALWAYS" => "N",
+                "PAGER_TEMPLATE" => ".default",
+                "PAGER_TITLE" => "Новости",
+                "PARENT_SECTION" => "",
+                "PARENT_SECTION_CODE" => "",
+                "PREVIEW_TRUNCATE_LEN" => "",
+                "PROPERTY_CODE" => array(
+                    0 => "",
+                    1 => "",
+                ),
+                "SET_BROWSER_TITLE" => "Y",
+                "SET_LAST_MODIFIED" => "N",
+                "SET_META_DESCRIPTION" => "Y",
+                "SET_META_KEYWORDS" => "Y",
+                "SET_STATUS_404" => "N",
+                "SET_TITLE" => "Y",
+                "SHOW_404" => "N",
+                "SORT_BY1" => "ACTIVE_FROM",
+                "SORT_BY2" => "SORT",
+                "SORT_ORDER1" => "DESC",
+                "SORT_ORDER2" => "ASC",
+                "COMPONENT_TEMPLATE" => "tour_news_index"
+            ),
+            false
+        ); ?>
 
     </div>
 </div>
