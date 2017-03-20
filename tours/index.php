@@ -1,75 +1,103 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Подбор тура");
-?>
-<?php
-$APPLICATION->SetPageProperty('title', 'Выбираем тур');
-if ($APPLICATION->GetProperty('showpagetitle') == 'true') $APPLICATION->ShowProperty('title');
-?>
-    <p>Наш Банк предоставляет физическим лицам большое число различных возможностей, связанных с сохранением средств и
-        совершением различных сделок. В частности, банк предлагает своим клиентам широкую линейку разнообразных вкладов,
-        способных удовлетворить как долгосрочные, так и краткосрочные интересы, касающиеся размещения свободных средств
-        по выгодным ставкам. В своей работе Банк активно применяет инновационные технологии динамично развивающейся
-        банковской сферы.</p>
-    <p>Банк предлагает своим клиентам качественный универсальный сервис по следующим направлениям:</p>
-    <ul>
-        <li><a href="fiz/cards.php">Банковские карты</a></li>
-        <li><a href="fiz/credit.php">Потребительский кредит</a></li>
-    </ul>
-    <br/>
-    <h1>Малому и среднему бизнесу</h1>
-
-    <p>Работа с предприятиями малого и среднего бизнеса - одно из стратегически важных направлений деятельности Банка.
-        Наш Банк представляет современные программы обслуживания малого и среднего бизнеса, обеспечивает оптимальные и
-        взаимовыгодные варианты сотрудничества, в основе которых лежит профессионализм сотрудников и высокое качество
-        банковских услуг. Услуги нашего Банка отличаются оперативностью и надежностью, так как ориентированы на деловых
-        людей - на тех, кто ценит свое время и деньги.</p>
-
-    <p>Банк предлагает следующие виды услуг для предприятий малого и среднего бизнеса:</p>
-
-    <ul>
-        <li><a href="smallbusiness/credit.php">Кредитование</a></li>
-
-        <li><a href="smallbusiness/leazing.php">Лизинг</a></li>
-
-        <li><a href="smallbusiness/deposits.php">Депозиты</a></li>
-
-        <li><a href="smallbusiness/cards.php">Пластиковые карты</a></li>
-    </ul>
-    <br/>
-    <h1>Корпоративным клиентам</h1>
-    <p>Банк является одним из лидеров банковского рынка по обслуживанию корпоративных клиентов.
-        Комплексное банковское обслуживание на основе максимального использования конкурентных преимуществ и
-        возможностей Банка позволяет создать устойчивую
-        финансовую платформу для развития бизнеса предприятий и холдингов различных отраслей экономики. Уже более 15 лет
-        Банк работает для своих клиентов,
-        являясь образцом надежности и высокого профессионализма.</p>
-    <p>Наш Банк предлагает корпоративным клиентам следующие виды услуг:</p>
-    <ul>
-        <li><a href="corp/rko.php">Расчетно-кассовое обслуживание</a></li>
-        <li><a href="corp/incass.php">Инкассация</a></li>
-        <li><a href="corp/ibank.php">Интернет-банкинг</a></li>
-    </ul>
-    <br/>
-    <h1>Финансовым организациям</h1>
-
-    <p>Активное сотрудничество на финансовых рынках представляет собой одну из наиболее важных сторон бизнеса и является
-        перспективным направлением деятельности нашего Банка. Политика банка направлена на расширение сотрудничества,
-        увеличение объемов взаимных кредитных линий. Солидная деловая репутация Банка на рынке межбанковских операций
-        способствует налаживанию стабильных и взаимовыгодных партнерских отношений с самыми крупными и надежными банками
-        страны.</p>
-    <p>Особое внимание Банк уделяет развитию взаимоотношений с международными финансовыми институтами. Финансирование
-        долгосрочных и среднесрочных проектов клиентов за счет привлечения средств на международных рынках капитала -
-        одно из приоритетных направлений деятельности Банка. Наш Банк имеет развитую сеть корреспондентских счетов, что
-        позволяет быстро и качественно осуществлять расчеты в различных валютах. Поручения клиентов могут быть исполнены
-        Банком в сжатые сроки.</p>
-    <p>В целях минимизации рисков при поведении операций на финансовых рынках наш Банк максимально требовательно
-        подходит к выбору своих банков-контрагентов. </p>
-
-    <p>В данном направлении Банк предлагает финансовым организациям следующие услуги:</p>
-    <ul>
-        <li><a href="financialorg/mbank.php">Услуги на межбанковском рынке</a></li>
-        <li><a href="financialorg/depservices.php">Депозитарные услуги</a></li>
-        <li><a href="financialorg/docoper.php">Документарные операции</a></li>
-    </ul>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+?><?$APPLICATION->IncludeComponent(
+	"bitrix:news", 
+	".default", 
+	array(
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"BROWSER_TITLE" => "-",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"COLOR_NEW" => "3E74E6",
+		"COLOR_OLD" => "C0C0C0",
+		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
+		"DETAIL_DISPLAY_TOP_PAGER" => "N",
+		"DETAIL_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"DETAIL_PAGER_SHOW_ALL" => "Y",
+		"DETAIL_PAGER_TEMPLATE" => "",
+		"DETAIL_PAGER_TITLE" => "Страница",
+		"DETAIL_PROPERTY_CODE" => array(
+			0 => "COUNTRY",
+			1 => "TYPE",
+			2 => "PRICE",
+			3 => "",
+		),
+		"DETAIL_SET_CANONICAL_URL" => "N",
+		"DISPLAY_AS_RATING" => "rating",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FONT_MAX" => "50",
+		"FONT_MIN" => "10",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "6",
+		"IBLOCK_TYPE" => "tours",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"LIST_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"LIST_PROPERTY_CODE" => array(
+			0 => "COUNTRY",
+			1 => "TYPE",
+			2 => "PRICE",
+			3 => "",
+		),
+		"MESSAGE_404" => "",
+		"META_DESCRIPTION" => "-",
+		"META_KEYWORDS" => "-",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PERIOD_NEW_TAGS" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"SEF_MODE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"TAGS_CLOUD_ELEMENTS" => "150",
+		"TAGS_CLOUD_WIDTH" => "100%",
+		"USE_CATEGORIES" => "N",
+		"USE_FILTER" => "N",
+		"USE_PERMISSIONS" => "N",
+		"USE_RATING" => "N",
+		"USE_REVIEW" => "N",
+		"USE_RSS" => "N",
+		"USE_SEARCH" => "N",
+		"USE_SHARE" => "N",
+		"COMPONENT_TEMPLATE" => ".default",
+		"VARIABLE_ALIASES" => array(
+			"SECTION_ID" => "SECTION_ID",
+			"ELEMENT_ID" => "ELEMENT_ID",
+		)
+	),
+	false
+);?><br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

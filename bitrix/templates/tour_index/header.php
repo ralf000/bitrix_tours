@@ -206,6 +206,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
             <div class="col-md-9">
 
                 <h1 class="txt-title">
-                    </span><?php $APPLICATION->ShowTitle(false); ?><span>
+                    <?php $APPLICATION->ShowTitle(); ?>
                 </h1>
 						

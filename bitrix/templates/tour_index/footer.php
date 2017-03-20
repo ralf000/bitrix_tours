@@ -199,14 +199,22 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                 ); ?>
             </div>
             <div class="col-sm-5 col-lg-4">
-                <div class="search-box">
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:search.form",
+                    "",
+                    Array(
+                        "PAGE" => "#SITE_DIR#search/index.php",
+                        "USE_SUGGEST" => "Y"
+                    )
+                );?>
+                <!--<div class="search-box">
                     <form action="#">
                         <input type="text" placeholder="Поиск...">
                         <div class="s-buttom">
                             <input type="submit" value="">
                         </div>
                     </form>
-                </div>
+                </div>-->
                 <ul class="social-links">
                     <?php
                     $APPLICATION->IncludeFile(
