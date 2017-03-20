@@ -12,7 +12,6 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
 <ul class="head-slider">
     <?php foreach ($arResult["ITEMS"] as $slide): ?>
         <?php
@@ -21,6 +20,6 @@ $this->setFrameMode(true);
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         // /фронтальное редактирование слайдов
         ?>
-        <li><a href="<?=$slide['PROPERTIES']['link']['VALUE']?>"><img src="<?= $slide['DETAIL_PICTURE']['SRC'] ?>"></a></li>
+        <li><a target="<?=$slide['linkTarget'] ?>" href="<?=$slide['link']?>"><img src="<?= $slide['DETAIL_PICTURE']['SRC'] ?>"></a></li>
     <?php endforeach; ?>
 </ul>
